@@ -134,7 +134,7 @@ elem.addEventListener("click", handler, 可选参数);
 function handler(e) {
   e.target; // 触发事件的元素
   e.preventDefault(); // 阻止默认行为（a跳转/表单提交）
-  e.stopPropagation(); // 阻止事件冒泡
+  e.stopPropagation(); // 终止当前事件后续所有传播流程，不分捕获 / 冒泡，在哪一段调用，就截断后面所有流程
 }
 ```
 ### 移除监听
