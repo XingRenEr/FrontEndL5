@@ -166,6 +166,12 @@ let list = document.querySelectorAll("p");
 list.forEach(p=> p.style.color="red");
 ```
 
+> 更正：分两种 NodeList
+静态 NodeList（static）：querySelectorAll 返回
+获取时一次性拍摄 DOM 快照，后续 DOM 变化不会影响集合，最常用。
+动态 NodeList（live）：childNodes 返回
+和 HTMLCollection 一样实时更新，包含所有节点类型。
+
 # HTMLCollection vs NodeList 核心区别
 | 特性        | HTMLCollection   | NodeList                      |
 | ----------- | ---------------- | ----------------------------- |
